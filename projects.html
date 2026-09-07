@@ -111,6 +111,14 @@
 
 <div class="project-box">
 
+<div class="conclude">
+
+<span class="cn">已结项 · 2026-09-07</span>
+
+<span class="en">Project Completed — v1.0 → v4.0 All Released</span>
+
+</div>
+
 <h2>MISC Hunter</h2>
 
 <p class="project-subtitle">CTF MISC 自动化分析工具</p>
@@ -122,6 +130,8 @@
 <p>MISC Hunter 是一个模块化的 CTF MISC 分析引擎：输入一个可疑文件，引擎会自动识别文件类型、执行常见分析、发现异常特征，再调用对应插件提取隐藏数据，并把每个新产物重新送入分析队列继续递归，直到没有新的发现，最终输出日志、报告与提取链。</p>
 
 <p>它的设计哲学很朴素——「机械自动化，推理留人类」：找到 flag 就直接报告；找不到就把文件、字符串与解码候选清晰地呈现出来；分析不出来的则明确列入「待人工分析」清单，绝不悄悄消失。从 v1.0 到 v3.0，工具覆盖面不断加深，核心依然保持纯 Python 实现、零强制第三方依赖，Kali Linux 与 Windows 均可运行。</p>
+
+<p>2026 年 9 月 7 日，v4.0 发布——搭载 DeepSeek 的 AI 辅助层（--ask / --rank / --agent 三种只读模式）随之落地，MISC Hunter 四代版本全部完成并正式结项：从 v1.0 一条能跑的流水线，成长为「确定性分析 + 人机接力 + AI 建议」的完整 MISC 分析体系。</p>
 
 <h3>Version Evolution</h3>
 
@@ -169,9 +179,11 @@
 
 <h4>v4.0</h4>
 
-<p>AI 辅助层：LLM 自动总结分析结果、给出下一步建议与原理解释</p>
+<p>AI 辅助层：DeepSeek 接入，--ask 解释、--rank 候选裁决、--agent 研究建议</p>
 
-<span>Coming Soon</span>
+<span class="released">Released</span>
+
+<a href="https://github.com/Vaux9527/MISC-Hunter-v4.0" target="_blank">↗ Repository</a>
 
 </div>
 
@@ -195,6 +207,8 @@
 
 <li>候选不丢弃：无法唯一判定的爆破候选全部落盘，交由字符串匹配与人工最终裁决</li>
 
+<li>AI 只读辅助（v4.0）：--ask 解释 / --rank 候选裁决 / --agent 研究建议，AI 只提供建议、从不参与最终裁决</li>
+
 </ul>
 
 <div class="tech">
@@ -209,11 +223,15 @@
 
 <span>CTF</span>
 
+<span>LLM</span>
+
 </div>
 
 <div class="project-meta">
 
-<div>状态 <strong>Active Development</strong></div>
+<div>状态 <strong>Completed</strong></div>
+
+<a href="https://github.com/Vaux9527/MISC-Hunter-v4.0" target="_blank">↗ v4.0 Repository</a>
 
 </div>
 
@@ -230,3 +248,4 @@
 </body>
 
 </html>
+
