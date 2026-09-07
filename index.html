@@ -13,334 +13,169 @@
 
 </head>
 
-
 <body>
-
 
 <header class="navbar">
 
-
 <div class="logo">
 
-<span>
-Vaux
-</span>
-
-Security Lab
+<span>Vaux</span> Security Lab
 
 </div>
-
-
 
 <nav>
 
+<a href="index.html">首页<small>HOME</small></a>
 
-<a href="index.html">
+<a href="projects.html">项目<small>PROJECTS</small></a>
 
-首页
+<a href="labs.html">实验<small>LABS</small></a>
 
-<small>
-HOME
-</small>
-
-</a>
-
-
-
-<a href="projects.html">
-
-项目
-
-<small>
-PROJECTS
-</small>
-
-</a>
-
-
-
-<a href="labs.html">
-
-实验
-
-<small>
-LABS
-</small>
-
-</a>
-
-
-
-<a href="about.html">
-
-关于
-
-<small>
-ABOUT
-</small>
-
-</a>
-
+<a href="about.html">关于<small>ABOUT</small></a>
 
 </nav>
 
-
 </header>
-
-
-
-
 
 <main>
 
-
 <section class="hero">
 
+<h1>Vaux 安全空间</h1>
 
-<h1>
+<p class="english">Vaux Security Lab</p>
 
-Vaux 安全空间
+<p class="description">记录网络安全的学习与研究：拆解漏洞原理、参与 CTF 实战、设计与打磨安全工具。我相信「重复的交给引擎，推理的留给自己」——这里沉淀的，正是这条路上每一次尝试的产物与经验。</p>
 
-</h1>
-
-
-
-<p class="english">
-
-Vaux Security Lab
-
-</p>
-
-
-
-
-<p class="description">
-
-记录网络安全学习历程，
-探索漏洞原理、CTF实践以及安全工具开发。
-
-</p>
-
-
-
-<p class="english-small">
-
-Documenting cybersecurity learning,
-vulnerability research and security tool development.
-
-</p>
-
-
-
+<p class="english-small">A personal security space — vulnerability research, CTF practice and hands-on security tool development.</p>
 
 <div class="buttons">
 
+<a href="projects.html">查看项目</a>
 
-<a href="projects.html">
+<a href="https://github.com/Vaux9527" target="_blank">GitHub</a>
 
-查看项目
-
-</a>
-
-
-
-<a href="https://github.com/Vaux9527" target="_blank">
-
-    GitHub
-
-</a>
-
+<a href="about.html">关于我</a>
 
 </div>
 
-
 </section>
-
-
-
-
-
 
 <section class="featured">
 
+<h2>核心项目</h2>
 
-<h2>
-
-核心项目
-
-</h2>
-
-
-<p class="english-small">
-
-Featured Projects
-
-</p>
-
-
-
+<p class="english-small">Featured Projects</p>
 
 <div class="project-list">
 
+<div class="project">
 
+<h3>MiniSec</h3>
+
+<p>网络安全漏洞实验平台</p>
+
+<p class="english-small">Web Vulnerability Learning Platform</p>
+
+<p>面向网络安全学习者的在线实验平台，内置 SQL 注入、XSS 等典型 Web 漏洞场景，通过模拟真实漏洞环境，串联「漏洞成因 → 利用过程 → 修复方案」的完整学习闭环。</p>
+
+<div class="tech">
+
+<span>Flask</span>
+
+<span>SQLite</span>
+
+<span>Web Security</span>
+
+</div>
+
+</div>
 
 <div class="project">
 
+<h3>MISC Hunter</h3>
 
-<h3>
+<p>CTF MISC 自动化分析工具</p>
 
-MiniSec
+<p class="english-small">Automated CTF MISC Analysis Engine</p>
 
-</h3>
+<p>模块化的 CTF MISC 分析引擎：自动识别文件、检测隐写、提取隐藏数据，并让每个新产物递归进入分析队列。v1.0 – v3.0 已发布，覆盖 PNG 隐写专项、密钥解密框架与外部工具矩阵；v4.0 AI 辅助层正在规划。</p>
 
+<div class="tech">
 
-<p>
+<span>Python</span>
 
-网络安全漏洞实验平台
+<span>Steganography</span>
 
-</p>
+<span>Forensics</span>
 
-
-
-<p class="english-small">
-
-Web vulnerability learning platform.
-
-</p>
-
+<span>CTF</span>
 
 </div>
 
-
-
-
-
-<div class="project">
-
-
-<h3>
-
-MISC Hunter
-
-</h3>
-
-
-<p>
-
-CTF MISC 自动化分析工具
-
-</p>
-
-
-<p class="english-small">
-
-Automated CTF MISC analysis engine.
-
-</p>
-
-
 </div>
 
-
 </div>
-
 
 </section>
-
-
-
-
-
 
 <section class="skills">
 
+<h2>探索方向</h2>
 
-<h2>
-
-探索方向
-
-</h2>
-
-
-
-<p class="english-small">
-
-Research Areas
-
-</p>
-
-
+<p class="english-small">Research Areas</p>
 
 <div class="skill-list">
 
+<div>
 
+<h3>Web Security</h3>
+
+<span>漏洞研究</span>
+
+<p>关注常见 Web 漏洞的原理分析与复现实验，在可控环境中亲手验证攻防细节，并把经验沉淀为教学相长的实验平台。</p>
+
+</div>
 
 <div>
 
-Web Security
+<h3>CTF</h3>
 
-<span>
+<span>竞赛实践</span>
 
-漏洞研究
-
-</span>
+<p>通过 CTF 题目持续沉淀解题思路，把 MISC 方向里重复、机械的步骤抽象成可复用的自动化流程。</p>
 
 </div>
-
-
-
 
 <div>
 
-CTF
+<h3>Security Tools</h3>
 
-<span>
+<span>工具开发</span>
 
-竞赛实践
-
-</span>
+<p>以真实需求驱动工具迭代，追求模块化、可解释与工程化——让工具替人完成穷举，把判断留给思考。</p>
 
 </div>
-
-
 
 <div>
 
-Security Tools
+<h3>Digital Forensics</h3>
 
-<span>
+<span>隐写取证</span>
 
-工具开发
-
-</span>
+<p>钻研图片隐写、文件伪装与加密数据恢复，把一次次的取证经验固化为稳定可用的分析插件。</p>
 
 </div>
 
-
-
 </div>
-
 
 </section>
 
-
-
 </main>
 
-
-
-
-
-<footer>
-
-© 2026 Vaux Security Lab
-
-</footer>
-
-
+<footer>© 2026 Vaux Security Lab</footer>
 
 <script src="js/main.js"></script>
-
 
 </body>
 
