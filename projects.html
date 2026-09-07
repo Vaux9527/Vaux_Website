@@ -1,547 +1,231 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-
 <head>
 
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Projects | Vaux Security Lab
-</title>
+<title>Projects | Vaux Security Lab</title>
 
 <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
-
 <body>
-
-
 
 <header class="navbar">
 
-
 <div class="logo">
 
-<span>
-Vaux
-</span>
-
-Security Lab
+<span>Vaux</span> Security Lab
 
 </div>
-
-
 
 <nav>
 
+<a href="index.html">首页<small>HOME</small></a>
 
-<a href="index.html">
-首页
-<small>HOME</small>
-</a>
+<a href="projects.html">项目<small>PROJECTS</small></a>
 
+<a href="labs.html">实验<small>LABS</small></a>
 
-<a href="projects.html">
-项目
-<small>PROJECTS</small>
-</a>
-
-
-<a href="labs.html">
-实验
-<small>LABS</small>
-</a>
-
-
-<a href="about.html">
-关于
-<small>ABOUT</small>
-</a>
-
+<a href="about.html">关于<small>ABOUT</small></a>
 
 </nav>
 
-
 </header>
-
-
-
-
-
 
 <main>
 
-
-
 <section class="page-header">
 
+<h1>项目中心</h1>
 
-<h1>
+<p class="english">Projects</p>
 
-项目中心
+<p class="description">这里收录我正在开发与维护的安全项目：面向学习者的 Web 漏洞实验平台，以及从 CTF 实战中生长出来的自动化分析工具链。每一个项目都记录它的定位、设计与版本演进。</p>
 
-</h1>
-
-
-<p class="english">
-
-Projects
-
-</p>
-
-
-<p class="description">
-
-记录正在开发与维护的网络安全项目。
-
-</p>
-
-
-<p class="english-small">
-
-Security projects under development and research.
-
-</p>
-
+<p class="english-small">Security projects under active development — from learning platforms to automated analysis engines.</p>
 
 </section>
 
-
-
-
-
-
-
-
-
-
 <section class="project-detail">
-
 
 <div class="project-box">
 
+<h2>MiniSec</h2>
 
+<p class="project-subtitle">网络安全漏洞实验平台</p>
 
-<h2>
-MiniSec
-</h2>
-
-
-
-<p class="project-subtitle">
-
-网络安全漏洞实验平台
-
-</p>
-
-
-
-<p class="english-small">
-
-Web Vulnerability Learning Platform
-
-</p>
-
-
-
+<p class="english-small">Web Vulnerability Learning Platform</p>
 
 <hr>
 
+<p>MiniSec 是一个面向网络安全学习者的 Web 漏洞实验平台。它通过模拟真实的漏洞环境，把抽象的漏洞原理变成可以亲手触发、观察与修复的完整过程——从 SQL 注入、XSS 等典型场景出发，帮助学习者在「看得见」的攻防中真正理解 Web 安全，而不仅仅是背诵概念。</p>
 
+<p>平台采用 Flask + SQLite 的轻量技术栈，本地即可快速搭建，也便于按需扩展新的实验场景；既可以作为自学与备赛的练习环境，也可以用于团队内部的技术分享演示。</p>
 
+<h3>平台特点</h3>
 
+<p class="english-small">Highlights</p>
 
-<p>
+<ul>
 
-MiniSec 是一个面向网络安全学习者的漏洞实验平台，
-通过模拟真实漏洞环境帮助理解 Web 安全原理。
+<li>内置 SQL 注入、XSS 等典型 Web 漏洞场景，还原真实的触发与利用过程</li>
 
-</p>
+<li>关注「漏洞成因 → 利用方式 → 修复方案」的完整学习闭环</li>
 
+<li>Flask + SQLite 轻量实现，部署简单、易于二次开发</li>
 
+<li>与静态教程互补，提供可动手操作、可反复重置的实验环境</li>
 
-
-
+</ul>
 
 <div class="tech">
 
+<span>Flask</span>
 
-<span>
-Flask
-</span>
+<span>SQLite</span>
 
+<span>HTML/CSS</span>
 
-<span>
-SQLite
-</span>
-
-
-<span>
-HTML/CSS
-</span>
-
-
-<span>
-Web Security
-</span>
-
+<span>Web Security</span>
 
 </div>
-
-
-
-
-
 
 <div class="project-meta">
 
+<div>状态 <strong>Active Development</strong></div>
 
-<div>
-
-状态
-
-<strong>
-Active Development
-</strong>
+<a href="https://github.com/Vaux9527/Vaux-Security-Lab" target="_blank">↗ GitHub Repository</a>
 
 </div>
 
-
-
-<a href="https://github.com/Vaux9527/Vaux-Security-Lab"
-target="_blank">
-
-↗ GitHub Repository
-
-</a>
-
-
 </div>
-
-
-
-
-
-</div>
-
 
 </section>
 
-
-
-
-
-
-
-
-
 <section class="project-detail">
-
 
 <div class="project-box">
 
+<h2>MISC Hunter</h2>
 
+<p class="project-subtitle">CTF MISC 自动化分析工具</p>
 
-<h2>
-
-MISC Hunter
-
-</h2>
-
-
-
-<p class="project-subtitle">
-
-CTF MISC 自动化分析工具
-
-</p>
-
-
-<p class="english-small">
-
-Automated CTF MISC Analysis Engine
-
-</p>
-
-
-
+<p class="english-small">Automated CTF MISC Analysis Engine</p>
 
 <hr>
 
+<p>MISC Hunter 是一个模块化的 CTF MISC 分析引擎：输入一个可疑文件，引擎会自动识别文件类型、执行常见分析、发现异常特征，再调用对应插件提取隐藏数据，并把每个新产物重新送入分析队列继续递归，直到没有新的发现，最终输出日志、报告与提取链。</p>
 
+<p>它的设计哲学很朴素——「机械自动化，推理留人类」：找到 flag 就直接报告；找不到就把文件、字符串与解码候选清晰地呈现出来；分析不出来的则明确列入「待人工分析」清单，绝不悄悄消失。从 v1.0 到 v3.0，工具覆盖面不断加深，核心依然保持纯 Python 实现、零强制第三方依赖，Kali Linux 与 Windows 均可运行。</p>
 
+<h3>Version Evolution</h3>
 
-<p>
-
-MISC Hunter 致力于自动化分析 CTF 中的图片、
-文件以及隐写类问题，生成详细分析日志与结果报告。
-
-</p>
-
-
-
-
-
-
-
-<h3>
-
-Version Evolution
-
-</h3>
-
-
-<p class="english-small">
-
-项目版本演进
-
-</p>
-
-
-
-
-
-
+<p class="english-small">项目版本演进</p>
 
 <div class="version-list">
 
+<div class="version-card">
 
+<h4>v1.0</h4>
+
+<p>基础分析框架：CLI 流水线、递归分析队列与自动化报告</p>
+
+<span class="released">Released</span>
+
+<a href="https://github.com/Vaux9527/MISC-Hunter-v1.0" target="_blank">↗ Repository</a>
+
+</div>
 
 <div class="version-card">
 
+<h4>v2.0</h4>
 
-<h4>
-v1.0
-</h4>
+<p>覆盖面：PNG 隐写专项、LSB 提取、ZIP 检测与 XOR/凯撒爆破</p>
 
+<span class="released">Released</span>
 
-<p>
-
-基础分析框架
-
-</p>
-
-
-<span class="released">
-
-Released
-
-</span>
-
-
-<a href="https://github.com/Vaux9527/MISC-Hunter-v1.0"
-target="_blank">
-
-↗ Repository
-
-</a>
-
+<a href="https://github.com/Vaux9527/MISC-Hunter-v2.0" target="_blank">↗ Repository</a>
 
 </div>
-
-
-
-
-
-
-
-
 
 <div class="version-card">
 
+<h4>v3.0</h4>
 
-<h4>
+<p>深度与接力：密钥解密框架、外部工具矩阵与 ZIP/RAR 爆破</p>
 
-v2.0
+<span class="released">Released</span>
 
-</h4>
-
-
-<p>
-
-图片隐写与文件分析
-
-</p>
-
-
-<span class="released">
-
-Released
-
-</span>
-
-
-<a href="https://github.com/Vaux9527/MISC-Hunter-v2.0"
-target="_blank">
-
-↗ Repository
-
-</a>
-
+<a href="https://github.com/Vaux9527/MISC-Hunter-v3.0" target="_blank">↗ Repository</a>
 
 </div>
-
-
-
-
-
-
-
-
 
 <div class="version-card">
 
+<h4>v4.0</h4>
 
-<h4>
+<p>AI 辅助层：LLM 自动总结分析结果、给出下一步建议与原理解释</p>
 
-v3.0
-
-</h4>
-
-
-<p>
-
-外部工具矩阵、密钥解密框架与 ZIP 密码爆破
-
-</p>
-
-
-<span>
-
-Coming Soon
-
-</span>
-
+<span>Coming Soon</span>
 
 </div>
 
-
-
-
-
-
-
-
-
-<div class="version-card">
-
-
-<h4>
-
-v4.0
-
-</h4>
-
-
-<p>
-
-AI 辅助层：LLM 自动总结、建议与解释
-
-</p>
-
-
-<span>
-
-Coming Soon
-
-</span>
-
-
 </div>
 
+<h3>核心能力</h3>
 
+<p class="english-small">Capabilities</p>
 
+<ul>
 
-</div>
+<li>全流程自动化：类型识别 → 隐写检测 → 数据提取 → 递归分析，结果汇总为报告与提取链</li>
 
+<li>插件自动发现：一个插件只解决一个问题，按 priority 自动编排，扩展插件无需改动主程序</li>
 
+<li>异常隔离与降级：单个插件崩溃不影响整体分析，外部工具缺失时自动提示并跳过</li>
 
+<li>人机接力：自动解密失败时通过 DECRYPT_NEEDED 把线索交给人类，支持目录批量分析与递归护栏</li>
 
+<li>密钥解密框架：XOR → Serpent → AES/DES/3DES 组合尝试，命中即报告完整解密路径</li>
 
+<li>候选不丢弃：无法唯一判定的爆破候选全部落盘，交由字符串匹配与人工最终裁决</li>
 
+</ul>
 
 <div class="tech">
 
+<span>Python</span>
 
-<span>
-Python
-</span>
+<span>Digital Forensics</span>
 
+<span>Steganography</span>
 
-<span>
-Digital Forensics
-</span>
+<span>Automation</span>
 
-
-<span>
-Automation
-</span>
-
-
-<span>
-CTF
-</span>
-
+<span>CTF</span>
 
 </div>
-
-
-
-
-
 
 <div class="project-meta">
 
-
-<div>
-
-状态
-
-<strong>
-Active Development
-</strong>
+<div>状态 <strong>Active Development</strong></div>
 
 </div>
 
-
 </div>
-
-
-
-
-</div>
-
 
 </section>
 
-
-
-
-
-
-
 </main>
 
-
-
-
-
-
-<footer>
-
-© 2026 Vaux Security Lab
-
-</footer>
-
-
+<footer>© 2026 Vaux Security Lab</footer>
 
 <script src="js/main.js"></script>
-
 
 </body>
 
