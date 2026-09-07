@@ -714,6 +714,153 @@ footer {
 
 
 /* =====================
+   Typography & Content Extras
+===================== */
+
+.project-box p,
+.about-box p,
+.project p,
+.skill-list div p,
+.exploration p {
+
+    margin-top:12px;
+
+}
+
+
+
+.project-box h2,
+.about-box h2 {
+
+    margin-bottom:6px;
+
+}
+
+
+
+.project-box h3,
+.about-box h3 {
+
+    margin-top:36px;
+
+}
+
+
+
+.project h3,
+.exploration h3,
+.skill-list div h3 {
+
+    margin-top:0;
+
+}
+
+
+
+.skill-list div h3 {
+
+    font-size:19px;
+
+}
+
+
+
+.skill-list div span {
+
+    display:block;
+
+    margin-top:4px;
+
+    color:#8b949e;
+
+    font-size:13px;
+
+}
+
+
+
+.exploration div p {
+
+    color:#c9d1d9;
+
+}
+
+
+
+.project-subtitle {
+
+    color:#c9d1d9;
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+
+
+.project-box hr,
+.about-box hr {
+
+    border:none;
+
+    border-top:1px solid #30363d;
+
+    margin:22px 0 12px;
+
+}
+
+
+
+.project-box ul,
+.about-box ul {
+
+    margin:14px 0 0 20px;
+
+    padding:0;
+
+}
+
+
+
+.project-box li,
+.about-box li {
+
+    margin:8px 0;
+
+}
+
+
+
+.version-card p {
+
+    margin-top:8px;
+
+    font-size:14px;
+
+    color:#c9d1d9;
+
+    line-height:1.65;
+
+}
+
+
+
+.version-card span.released {
+
+    border-color:#2ea043;
+
+    color:#3fb950;
+
+    background:rgba(46,160,67,.12);
+
+}
+
+
+
+
+
+/* =====================
    Mobile
 ===================== */
 
