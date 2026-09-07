@@ -860,6 +860,90 @@ footer {
 
 
 
+.conclude {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:6px 20px;
+
+    margin-bottom:22px;
+
+    padding:10px 18px;
+
+    border:1px solid #2ea043;
+
+    border-radius:10px;
+
+    background:rgba(46,160,67,.1);
+
+    font-weight:700;
+
+}
+
+
+
+.conclude .cn {
+
+    color:#3fb950;
+
+}
+
+
+
+.conclude .en {
+
+    color:#8b949e;
+
+    font-weight:400;
+
+    font-size:13px;
+
+}
+
+
+
+.project-action {
+
+    display:inline-flex;
+
+    margin-top:22px;
+
+    padding:8px 20px;
+
+    border-radius:999px;
+
+    border:1px solid #30363d;
+
+    color:#ffffff;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+
+
+.project-action:hover {
+
+    border-color:#ffffff;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+
 /* =====================
    Mobile
 ===================== */
