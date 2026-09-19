@@ -45,9 +45,9 @@
 
 <p class="english">Projects</p>
 
-<p class="description">这里收录我正在开发与维护的安全项目：面向学习者的 Web 漏洞实验平台，以及从 CTF 实战中生长出来的自动化分析工具链。每一个项目都记录它的定位、设计与版本演进。</p>
+<p class="description">这里收录我已完成并归档的安全项目：面向学习者的 Web 漏洞教学靶场，以及从 CTF 实战中生长出来的自动化分析工具链。每一个项目都记录了它的定位、设计取舍与完整演进过程。</p>
 
-<p class="english-small">Security projects under active development — from learning platforms to automated analysis engines.</p>
+<p class="english-small">Completed security projects — a hands-on vulnerability lab and an automated analysis engine.</p>
 
 </section>
 
@@ -55,31 +55,115 @@
 
 <div class="project-box">
 
+<div class="conclude">
+
+<span class="cn">已结项 · 2026-09-19</span>
+
+<span class="en">Project Completed — 6 Vulnerability Classes · 10 Levels · 166 Tests</span>
+
+</div>
+
 <h2>MiniSec</h2>
 
-<p class="project-subtitle">网络安全漏洞实验平台</p>
+<p class="project-subtitle">Web 安全漏洞教学靶场</p>
 
-<p class="english-small">Web Vulnerability Learning Platform</p>
+<p class="english-small">Web Vulnerability Teaching Lab</p>
 
 <hr>
 
-<p>MiniSec 是一个面向网络安全学习者的 Web 漏洞实验平台。它通过模拟真实的漏洞环境，把抽象的漏洞原理变成可以亲手触发、观察与修复的完整过程——从 SQL 注入、XSS 等典型场景出发，帮助学习者在「看得见」的攻防中真正理解 Web 安全，而不仅仅是背诵概念。</p>
+<p>MiniSec 是一个面向网络安全学习者的 Web 漏洞教学靶场：覆盖 6 类漏洞共 10 个关卡，每一关都走完「原理 → 操作 → 分析 → 成因 → 修复」五段。SQL 真的执行、脚本真的在浏览器里弹窗、命令真的在系统上跑、上传的文件真的落盘——目标不是「看懂」，而是「亲手做过一遍」。</p>
 
-<p>平台采用 Flask + SQLite 的轻量技术栈，本地即可快速搭建，也便于按需扩展新的实验场景；既可以作为自学与备赛的练习环境，也可以用于团队内部的技术分享演示。</p>
+<p>它最坚持的一条设计是 <strong>通关判定看事实，不看关键词</strong>：判的是查询实际返回了几行、提交的凭据是不是一组合法凭据、结果里有没有内部表的数据、磁盘上那个文件的文件头是不是图片、目标地址解析出来是不是内网 IP——所以用黑名单之外的手法绕过时，判定依然正确，每一条判定标准也都能写进文档、可以复现。</p>
 
-<h3>平台特点</h3>
+<p>平台自身与靶子刻意分家：靶子注定会被打穿，因此<strong>一关一个独立靶子库</strong>（6 个库 + 2 个靶子目录），与平台账号数据完全隔离，还可以一关一关地单独恢复出厂。平台自己的代码全程参数化查询、密码哈希存储、CSRF 令牌校验、每 IP 限速。</p>
 
-<p class="english-small">Highlights</p>
+<p>2026 年 9 月 19 日，全部 10 个关卡完成，配套 166 项自动化回归测试与逐关验收脚本（每关跑一个正例 + 一个反例，证明判定既不过松也不过严），MiniSec 正式结项。靶场只在本机运行、不上线——也正因为如此，命令注入那一关才敢做成真的执行系统命令（工作目录固定在沙箱、3 秒超时、输出截断）。</p>
+
+<h3>Version Evolution</h3>
+
+<p class="english-small">版本演进</p>
+
+<div class="version-list">
+
+<div class="version-card">
+
+<h4>v0.1</h4>
+
+<p>地基：平台库与靶子库分离、一键幂等重建、Level 1 基础查询注入</p>
+
+<span class="released">Completed</span>
+
+</div>
+
+<div class="version-card">
+
+<h4>v0.5</h4>
+
+<p>安全基线：CSRF 令牌、每 IP 限速、robots.txt、恢复出厂入口、生产入口 fail closed</p>
+
+<span class="released">Completed</span>
+
+</div>
+
+<div class="version-card">
+
+<h4>v0.8</h4>
+
+<p>横向扩展：XSS 反射型/存储型、文件上传、SSRF、命令注入（真执行 + 沙箱）</p>
+
+<span class="released">Completed</span>
+
+</div>
+
+<div class="version-card">
+
+<h4>v1.0</h4>
+
+<p>完整版：越权访问 + CSRF、通关进度记录、166 项回归测试与逐关验收脚本</p>
+
+<span class="released">Released</span>
+
+</div>
+
+</div>
+
+<h3>关卡覆盖</h3>
+
+<p class="english-small">Levels — 6 Vulnerability Classes, 10 Levels</p>
 
 <ul>
 
-<li>内置 SQL 注入、XSS 等典型 Web 漏洞场景，还原真实的触发与利用过程</li>
+<li><strong>SQL 注入（3 关）</strong>基础查询注入 · 登录绕过 · UNION 跨表读取</li>
 
-<li>关注「漏洞成因 → 利用方式 → 修复方案」的完整学习闭环</li>
+<li><strong>XSS（2 关）</strong>反射型（不做过滤，先看清最基本的因果关系）· 存储型（弱黑名单绕过 + 持久化影响面）</li>
 
-<li>Flask + SQLite 轻量实现，部署简单、易于二次开发</li>
+<li><strong>文件上传</strong>只做后缀黑名单的校验为什么靠不住，以及「上传目录能被浏览器直接访问」的后果</li>
 
-<li>与静态教程互补，提供可动手操作、可反复重置的实验环境</li>
+<li><strong>SSRF</strong>服务端请求伪造：让服务器去访问它内部才够得着的地方</li>
+
+<li><strong>命令注入</strong>字符串拼接 + 交给 shell，两个条件缺一不可</li>
+
+<li><strong>越权访问（IDOR）</strong>认证不等于授权：身份不变，改一个编号就读到别人的数据</li>
+
+<li><strong>CSRF</strong>Cookie 只证明「你是谁」，不证明「这个请求是你发的」</li>
+
+</ul>
+
+<h3>工程化实践</h3>
+
+<p class="english-small">Engineering</p>
+
+<ul>
+
+<li>166 项自动化回归测试，覆盖通关判定、分库隔离、安全基线与全部 10 个关卡</li>
+
+<li>逐关验收脚本（verify_levels.py）：一关一条命令，每关跑一个正例 + 一个反例</li>
+
+<li>关卡清单单一数据源（curriculum.py）+ 关卡页公共骨架（lab_base.html）：新增一关只改一处</li>
+
+<li>通关进度持久化；每关独立恢复出厂；平台安全基线与靶子故意不安全形成对照</li>
+
+<li>全站中英对照，术语保留英文；每关 3 级分层提示与「漏洞代码 vs 修复代码」对照</li>
 
 </ul>
 
@@ -89,15 +173,21 @@
 
 <span>SQLite</span>
 
-<span>HTML/CSS</span>
+<span>Jinja2</span>
 
 <span>Web Security</span>
+
+<span>SQL Injection</span>
+
+<span>XSS</span>
+
+<span>SSRF</span>
 
 </div>
 
 <div class="project-meta">
 
-<div>状态 <strong>Active Development</strong></div>
+<div>状态 <strong>Completed</strong></div>
 
 <a href="https://github.com/Vaux9527/Vaux-Security-Lab" target="_blank">↗ GitHub Repository</a>
 
